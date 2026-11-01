@@ -1,6 +1,6 @@
 #include <iostream>
 
-// Homework 9 — Your Name
+// Homework 9 — Freesia Garcia
 // CIS 5 Week 09 · Menu on the lab
 // Paste your lab functions here, or fill the TODOs.
 
@@ -9,7 +9,17 @@ void printMenu() {
 }
 
 double average(const int a[], int n) {
-  // TODO: walk a and return the average. If n == 0, return 0.
+  if (n == 0) {
+    return 0;
+  }
+
+  int sum = 0;
+
+  for (int i = 0; i < n; i++) {
+    sum += a[i];
+  }
+
+  return static_cast<double>(sum) / n;
   return 0.0;
 }
 
@@ -18,7 +28,14 @@ void printSummary(double avg) {
 }
 
 int high(const int a[], int n) {
-  // TODO: return the max. Seed from a[0].
+  int max = a[0];
+
+  for (int i = 1; i < n; i++) {
+    if (a[i] > max) {
+      max = a[i];
+    }
+  }
+
   return a[0];
 }
 
